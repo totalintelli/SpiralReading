@@ -1,0 +1,11 @@
+D:\develop\CSharpStudy\SpiralReading\bin\Debug\netcoreapp2.2\SpiralReading.deps.json
+D:\develop\CSharpStudy\SpiralReading\bin\Debug\netcoreapp2.2\SpiralReading.runtimeconfig.json
+D:\develop\CSharpStudy\SpiralReading\bin\Debug\netcoreapp2.2\SpiralReading.runtimeconfig.dev.json
+D:\develop\CSharpStudy\SpiralReading\bin\Debug\netcoreapp2.2\SpiralReading.dll
+D:\develop\CSharpStudy\SpiralReading\bin\Debug\netcoreapp2.2\SpiralReading.pdb
+D:\develop\CSharpStudy\SpiralReading\obj\Debug\netcoreapp2.2\SpiralReading.csprojAssemblyReference.cache
+D:\develop\CSharpStudy\SpiralReading\obj\Debug\netcoreapp2.2\SpiralReading.csproj.CoreCompileInputs.cache
+D:\develop\CSharpStudy\SpiralReading\obj\Debug\netcoreapp2.2\SpiralReading.AssemblyInfoInputs.cache
+D:\develop\CSharpStudy\SpiralReading\obj\Debug\netcoreapp2.2\SpiralReading.AssemblyInfo.cs
+D:\develop\CSharpStudy\SpiralReading\obj\Debug\netcoreapp2.2\SpiralReading.dll
+D:\develop\CSharpStudy\SpiralReading\obj\Debug\netcoreapp2.2\SpiralReading.pdb
