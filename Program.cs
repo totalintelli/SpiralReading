@@ -39,6 +39,77 @@ namespace SpiralReading
             Console.WriteLine("5. 만약에 입력값이 5인 경우 {5, 4, 3, 2, 1, 6, 11, 16, 21, 22, 23, 24, 25, 20, 15, 10, 9, 8, 7, 12, 17, 18, 19, 14, 13}를 출력하는가?");
             whenIfInputIsFive();
             Console.WriteLine();
+
+            Console.WriteLine("6. 만약에 입력값이 6인 경우 {6, 5, 4, 3, 2, 1, 7, 13, 19, 25, 31, 32, 33, 34, 35, 36, 30, 24, 18, 12, 11, 10," + 
+                                   " 9, 8, 14, 20, 26, 27, 28, 29, 23, 17, 16, 15, 21, 22 }를 출력하는가?");
+            whenIfInputIsSix();
+            Console.WriteLine();
+
+            Console.WriteLine("7. 만약에 입력값이 7인 경우 {7, 6, 5, 4, 3, 2, 1, 8, 15, 22, 29, 36, 43, 44, 45, 46, 47, 48, 49, 42, 35, 28, 21," +
+                                   " 14, 13, 12, 11, 10, 9, 16, 23, 30, 37, 38, 39, 40, 41, 34, 29, 20, 19, 18, 17, 24, 31, 32, 33, 26, 25 }를 출력하는가?");
+            whenIfInputIsSeven();
+            Console.WriteLine();
+
+            Console.WriteLine("7. 만약에 입력값이 10인 경우 {10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 11, 21, 31, 41, 51, 61, 71, 81, 91, 92, 93, 94, 95," +
+                                   " 96, 97, 98, 99, 100, 90, 80, 70, 60, 50, 40, 30, 20, 19, 18, 17, 16, 15, 14, 13, 12, 22, 32, 42, 52, 62, 72," + 
+                                   " 82, 83, 84, 85, 86, 87, 88, 89, 79, 69, 59, 49, 39, 29, 28, 27, 26, 25, 24, 23, 33, 43, 53, 63, 73, 74, 75, " +
+                                   " 76, 77, 78, 68, 58, 48, 38, 37, 36, 35, 34, 44, 54, 64, 65, 66, 67, 57, 47, 46, 45, 55, 56}를 출력하는가?");
+            whenIfInputIsTen();
+            Console.WriteLine();
+        }
+
+        /// <summary>
+        /// 만약에 입력값이 10인 경우 {10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 11, 21, 31, 41, 51, 61, 71, 81, 91, 92, 93, 94, 95,
+        /// 96, 97, 98, 99, 100, 90, 80, 70, 60, 50, 40, 30, 20, 19, 18, 17, 16, 15, 14, 13, 12, 22, 32, 42, 52, 62, 72,
+        /// 82, 83, 84, 85, 86, 87, 88, 89, 79, 69, 59, 49, 39, 29, 28, 27, 26, 25, 24, 23, 33, 43, 53, 63, 73, 74, 75,
+        /// 76, 77, 78, 68, 58, 48, 38, 37, 36, 35, 34, 44, 54, 64, 65, 66, 67, 57, 47, 46, 45, 55, 56}를 출력하는가?
+        /// </summary>
+        private static void whenIfInputIsTen()
+        {
+            int input = 10;
+            ROW = input;
+            COLUMN = input;
+            int[] expectedResult = new int[] { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 11, 21, 31, 41, 51, 61, 71, 81, 91, 92, 93, 94, 95,
+                                               96, 97, 98, 99, 100, 90, 80, 70, 60, 50, 40, 30, 20, 19, 18, 17, 16, 15, 14, 13,
+                                               12, 22, 32, 42, 52, 62, 72, 82, 83, 84, 85, 86, 87, 88, 89, 79, 69, 59, 49, 39, 29,
+                                               28, 27, 26, 25, 24, 23, 33, 43, 53, 63, 73, 74, 75, 76, 77, 78, 68, 58, 48, 38, 37,
+                                               36, 35, 34, 44, 54, 64, 65, 66, 67, 57, 47, 46, 45, 55, 56};
+            int[,] arr = makeArray(input);
+            int[] results = counterClockspiral(input, arr);
+            assertThat(results, expectedResult);
+        }
+
+        /// <summary>
+        /// 만약에 입력값이 7인 경우 {7, 6, 5, 4, 3, 2, 1, 8, 15, 22, 29, 36, 43, 44, 45, 46, 47, 48, 49, 42, 35, 28, 21,
+        ///  14, 13, 12, 11, 10, 9, 16, 23, 30, 37, 38, 39, 40, 41, 34, 29, 20, 19, 18, 17, 24, 31, 32, 33, 26, 25 }를 출력하는가?
+        /// </summary>
+        private static void whenIfInputIsSeven()
+        {
+            int input = 7;
+            ROW = input;
+            COLUMN = input;
+            int[] expectedResult = new int[] { 7, 6, 5, 4, 3, 2, 1, 8, 15, 22, 29, 36, 43, 44, 45, 46, 47, 48, 49, 42, 35, 28, 21,
+                                               14, 13, 12, 11, 10, 9, 16, 23, 30, 37, 38, 39, 40, 41, 34, 29, 20, 19, 18, 17, 24,
+                                               31, 32, 33, 26, 25};
+            int[,] arr = makeArray(input);
+            int[] results = counterClockspiral(input, arr);
+            assertThat(results, expectedResult);
+        }
+
+        /// <summary>
+        /// 만약에 입력값이 6인 경우 {6, 5, 4, 3, 2, 1, 7, 13, 19, 25, 31, 32, 33, 34, 35, 36, 30, 24, 18, 12, 11, 10," 
+        /// " 9, 8, 14, 20, 26, 27, 28, 29, 23, 17, 16, 15, 21, 22 }를 출력하는가?
+        /// </summary>
+        private static void whenIfInputIsSix()
+        {
+            int input = 6;
+            ROW = input;
+            COLUMN = input;
+            int[] expectedResult = new int[] { 6, 5, 4, 3, 2, 1, 7, 13, 19, 25, 31, 32, 33, 34, 35, 36, 30, 24, 18, 12, 11, 10,
+                                               9, 8, 14, 20, 26, 27, 28, 29, 23, 17, 16, 15, 21, 22};
+            int[,] arr = makeArray(input);
+            int[] results = counterClockspiral(input, arr);
+            assertThat(results, expectedResult);
         }
 
         /// <summary>
@@ -117,15 +188,27 @@ namespace SpiralReading
             bool bResult = false;
 
             Console.Write("출력값 : ");
-            for (int i = 0; i < ROW * COLUMN ; i++)
+
+            if (result.Length > arr.Length)
             {
-                if (arr[i] == result[i])
-                {
-                    bResult = true;
-                }
-                Console.Write(result[i] + " ");
+                bResult = false;
             }
-            Console.WriteLine();
+            else
+            {
+                for (int i = 0; i < ROW * COLUMN; i++)
+                {
+                    if (arr[i] == result[i])
+                    {
+                        bResult = true;
+                    }
+                    else
+                    {
+                        bResult = false;
+                    }
+                    Console.Write(result[i] + " ");
+                }
+                Console.WriteLine();
+            }
 
             Console.WriteLine("답 : " + bResult);
         }
@@ -153,7 +236,6 @@ namespace SpiralReading
             int endingColumnIndex = 0;
             int i, startingRowIndex = 0, startingColumnIndex = input - 1;
             int[] results = new int[input * input];
-            int ri = 0; // 결과물들 인덱스
 
             // startingRowIndex - 시작하는 행 인덱스 
             // endingRowIndex - 끝나는 행 인덱스
@@ -183,7 +265,7 @@ namespace SpiralReading
                 {
                     startingRowIndex = rightToLeftCnt;
                     endingRowIndex = rightToLeftCnt;
-                    startingColumnIndex = input - 2;
+                    startingColumnIndex = input - (rightToLeftCnt + 1);
                     endingColumnIndex = rightToLeftCnt;
                 }
 
@@ -198,9 +280,10 @@ namespace SpiralReading
                 // 오른쪽에서 왼쪽으로 출력한다.
                 for (i = startingColumnIndex; i >= endingColumnIndex; i--)
                 {
-                    results[ri] = arr[startingRowIndex, i];
-                    ri++;
+                    results[cnt] = arr[startingRowIndex, i];
                     cnt++;
+                    if (cnt == total)
+                        break;
                 }
                 rightToLeftCnt++;
                 startingRowIndex++;
@@ -215,16 +298,17 @@ namespace SpiralReading
                 }
                 else
                 {
-                    endingRowIndex = input - 2;
+                    endingRowIndex = input - upToDownCnt - 1;
                     startingColumnIndex = upToDownCnt;
                 }
 
                 // 위에서 아래로 출력한다.
                 for (i = startingRowIndex; i <= endingRowIndex; i++)
                 {
-                    results[ri] = arr[i, startingColumnIndex];
-                    ri++;
+                    results[cnt] = arr[i, startingColumnIndex];
                     cnt++;
+                    if (cnt == total)
+                        break;
                 }
                 upToDownCnt++;
                 startingColumnIndex++;
@@ -240,16 +324,16 @@ namespace SpiralReading
                 else
                 {
                     startingRowIndex = input - leftToRightCnt - 1;
-                    endingRowIndex = startingRowIndex;
-                    endingColumnIndex = input - 2;
+                    endingColumnIndex = input - leftToRightCnt - 1;
                 }
                 
                 // 왼쪽에서 오른쪽으로 출력한다.
                 for (i = startingColumnIndex; i <= endingColumnIndex; i++)
                 {
-                    results[ri] = arr[startingRowIndex, i];
-                    ri++;
+                    results[cnt] = arr[startingRowIndex, i];
                     cnt++;
+                    if (cnt == total)
+                        break;
                 }
                 leftToRightCnt++;
                 startingRowIndex--;
@@ -259,7 +343,6 @@ namespace SpiralReading
 
                 if (downToUpCnt == 0)
                 {
-                    
                     startingColumnIndex = input - 1;
                 }
                 endingRowIndex = downToUpCnt + 1;
@@ -267,9 +350,10 @@ namespace SpiralReading
                 // 아래에서 위로 출력한다.
                 for (i = startingRowIndex; i >= endingRowIndex; i--)
                 {
-                    results[ri] = arr[i, endingColumnIndex];
-                    ri++;
+                    results[cnt] = arr[i, endingColumnIndex];
                     cnt++;
+                    if (cnt == total)
+                        break;
                 }
                 downToUpCnt++;
             }
